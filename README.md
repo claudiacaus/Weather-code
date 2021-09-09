@@ -13,12 +13,13 @@ This is a Weather web application that provides weather information using Public
 * The app needs to interact with an API to grab data.
 * The app needs to have loading/error handling for the interaction with the API.
 * The app needs some user interaction such that you need to grab different data from the API.
+* Use more than one API.
 * The UI needs to be testable. 
 
 ## Nice to have
 
 * Should add more features related with the weather.
-* Use more than one API.
+
 <!-- blank line -->
 ----
 <!-- blank line -->
