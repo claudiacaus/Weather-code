@@ -23,3 +23,16 @@ Author: Arthur K.
 
 [OpenWeatherMap](https://openweathermap.org/api) <br>
 [QWeather](https://dev.qweather.com/en/)
+
+### Getting Started
+
+To get started you can simply clone the repo and install the dependencies in the root folder
+
+| Steps   |with [NPM](https://www.npmjs.com/) |
+| ------- | --------------------------------- | 
+| Install |`npm install`                      |
+| Run     |`npm run dev`                      |
+
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
