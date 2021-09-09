@@ -19,7 +19,9 @@ This is a Weather web application that provides weather information using Public
 
 * Should add more features related with the weather.
 * Use more than one API.
-
+<!-- blank line -->
+----
+<!-- blank line -->
 ### Public API's in use
 
 [OpenWeatherMap](https://openweathermap.org/api) <br>
