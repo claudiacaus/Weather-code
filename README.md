@@ -4,7 +4,8 @@ This is a Weather web application that provides weather information using Public
 
 ### Design inspiration
 <img alt="weather" src="https://cdn.dribbble.com/users/2158940/screenshots/7118235/media/1ea59d43e8e99a529220bed091f8eb84.png?compress=1&resize=1200x900" />
-Author: Arthur K. 
+
+[Arthur K](https://dribbble.com/thearthurk)
 
 ## Project requirements
 
