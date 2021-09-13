@@ -13,14 +13,20 @@ export const clearDOMElement = (DOMElement) => {
  *
  *  id - the id of the element
  */
-export const createDOMElement = (tag, options) => {
-  const { id } = options || {};
+export const elementFactory = (type, attributes, ...children) => {
+  const element = document.createElement(type);
 
-  const element = document.createElement(tag);
-
-  if (id != null) {
-    element.id = id;
+  for (key in attributes) {
+    element.setAttribute(key, attributes[key]);
   }
+
+  children.forEach((child) => {
+    if (typeof child === 'string') {
+      element.appendChild(document.createTextNode(child));
+    } else {
+      element.appendChild(child);
+    }
+  });
 
   return element;
 };
@@ -30,5 +36,3 @@ export const createDOMElement = (tag, options) => {
 export const getDOMElement = (id) => {
   return document.getElementById(id);
 };
-
-createDOMElement(weather, div);
