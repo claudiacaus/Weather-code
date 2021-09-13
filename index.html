@@ -9,72 +9,69 @@
     <script type="module" src="main.js" defer></script>
   </head>
   <body>
-    <form id="form">
-      <input
-        type="text"
-        id="search"
-        placeholder="Search another location"
-        autocomplete="off"
-      />
-    </form>
-    <main id="main"></main>
-    <div class="weather-container">
-      <div class="weather-result">
-        <div class="logo">
-          <h3 class="text-white">Weather code</h3>
-        </div>
+    <!---->
 
-        <div>
-          <div>
-            <h1 class="text-white">16 <sup>&#176</sup></h1>
-          </div>
-          <div>
-            <h2 >London</h2>
-            <p>14:05 - Monday, 9 Sep ’21</p>
-          </div>
-          <div>Icon</div>
-        </div>
-        </div>
-        <!-- Celsius (h1) - City- Date - Icon -->
+    <div class="weather-result">
+      <div class="logo">
+        <h3 class="text-white">Weather code</h3>
       </div>
 
-      <div class="weather-information">
-        <div id="search-bar">
-          <input
-            type="text"
-            name="search"
-            id="search"
-            placeholder="Search new location"
-          />
-        </div>
-        <!---->
-        <ul>
-          <li class="city-default text-white">Amsterdam</li>
-          <li class="city-default text-white">Berlin</li>
-          <li class="city-default text-white">London</li>
-          <li class="city-default text-white">Paris</li>
-        </ul>
-        <!---->
+      <main id="main"></main>
+
+      <div>
+        <h1 id="temperature">°C</h1>
+      </div>
+
+      <div>
+        <h2 id="cityResult">London</h2>
+      </div>
+
+      <div>
+        <img id="icon" alt="weather icon" />
+      </div>
+    </div>
+
+    <!---->
+    <div class="weather-input">
+      <form id="form">
+        <input
+          type="text"
+          id="search"
+          placeholder="Search another location"
+          autocomplete="off"
+        />
+      </form>
+
+      <button type="button" id="button-submit">Get your city weather</button>
+
+      <!---->
+      <ul>
+        <li><a href="" class="city-default amsterdam">Amsterdam</a></li>
+        <li><a href=" " class="city-default berlin">Berlin</a></li>
+        <li><a href="" class="city-default newYork">New York</a></li>
+        <li><a href="" class="city-default paris">Paris</a></li>
+      </ul>
+      <!---->
+      <hr />
+      <div class="weather-result-details">
+        <p>Weather Details</p>
         <table>
           <tr>
-            <th class="text-white">Weather Details</th>
-            <th></th>
+            <td>cloudy</td>
+            <td>%</td>
           </tr>
           <tr>
-            <td class="text-white">Cloudy</td>
-            <td class="text-white">86%</td>
+            <td>Humidity</td>
+            <td>%</td>
           </tr>
           <tr>
-            <td class="text-white">Humidity</td>
-            <td class="text-white">62%</td>
-          </tr>
-          <tr>
-            <td class="text-white">Wind</td>
-            <td class="text-white">8km/h</td>
+            <td>Wind</td>
+            <td>km/h</td>
           </tr>
         </table>
-        <!---->
       </div>
+
+      <!---->
     </div>
   </body>
 </html>

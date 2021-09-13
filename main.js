@@ -1,8 +1,19 @@
+import { initializeWeather } from './initWeather.js';
+
 const apikey = 'f0ac2059eb1d1bf2491b1e3d95aa35b2';
 
 const main = document.getElementById('main');
 const form = document.getElementById('form');
 const search = document.getElementById('search');
+const buttonGeolocation = document.getElementById('button-submit');
+const section = document.getElementById('section');
+const temperature = document.getElementById('temperature');
+const cityResult = document.getElementById('cityResult');
+const icon = document.getElementById('icon');
+const amsterdam = document.getElementById('amsterdam');
+const berlin = document.getElementById('berlin');
+const newYork = document.getElementById('newYork');
+const paris = document.getElementById('paris');
 
 const url = (city) =>
   `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`;
@@ -27,11 +38,16 @@ function addWeatherToPage(data) {
   const weather = document.createElement('div');
   weather.classList.add('weather');
 
-  weather.innerHTML = `
-        <h2><img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" /> ${temp}°C <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" /></h2>
-        <small>${data.weather[0].main}</small>
-    `;
+  const weatherDetails = document.createElement('div');
+  weatherDetails.classList.add('weatherDetails');
 
+  weather.innerHTML = `
+        <h2> ${temp}°C <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" /></h2>
+        <small>${data.weather[0].main}</small>
+        `;
+  //
+
+  weatherDetails.innerHTML = `<`;
   // cleanup
   main.innerHTML = '';
 
@@ -53,38 +69,34 @@ form.addEventListener('submit', (e) => {
   }
 });
 
+//default location weather
+getSearchedWeather('London');
+
+//////////////////////////////////////////////////////////
+
+buttonGeolocation.addEventListener('click', getWeatherByUserGeolocation);
+
+////////////////////////////////////////////////////
+
 function getWeatherByUserGeolocation() {
+  let long;
+  let lat;
+  // Accessing Geolocation of User
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    alert(
-      "Your locations isn't available to us and we can't show the weather data.",
-    );
+    navigator.geolocation.getCurrentPosition((position) => {
+      // Storing Longitude and Latitude in variables
+      long = position.coords.longitude;
+      lat = position.coords.latitude;
+      const base = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apikey}`;
+
+      // Using fetch to get data
+      fetch(base)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          return addWeatherToPage(data);
+        });
+    });
   }
-  function showPosition(positions) {
-    let lat = positions.coords.latitude;
-    let lon = positions.coords.longitude;
-
-    console.log(lat, lon);
-    showData(lat, lon);
-  }
-}
-
-function showData(latitude, longitude) {
-  const api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apikey}`;
-  console.log(api);
-  retData(api);
-}
-
-async function retData(api) {
-  const apiGeo = await fetch(api);
-  const dataApi = await apiGeo.json();
-  console.log(dataApi);
-
-  showRes(dataApi);
-}
-
-function showRes(dataWeather) {
-  const { main } = dataWeather;
-  console.log(dataWeather);
 }
