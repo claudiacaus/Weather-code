@@ -23,10 +23,9 @@ This is a Weather web application that provides weather information using Public
 
 ---
 
-### Public API's in use
+### Public API in use
 
 [OpenWeatherMap](https://openweathermap.org/api) <br>
-[QWeather](https://dev.qweather.com/en/)
 
 ### Getting Started
 
