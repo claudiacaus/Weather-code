@@ -267,7 +267,24 @@ hr {
 
 @media screen and (max-width: 600px) {
   #card {
-    display: flex;
+    display: inline-block;
     flex-direction: column;
+    position: relative;
+    max-width: 80%;
+  }
+  #city-icon {
+    max-width: 150px;
+  }
+  #cityResult {
+    font-size: 30px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  .show-weather {
+    max-width: 80%;
+  }
+  .weather-input {
+    max-width: 80%;
   }
 }
