@@ -6,99 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather code</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost&family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css"
+    />
+
     <script type="module" src="main.js" defer></script>
   </head>
   <body>
-    <!---->
-    <div id="card">
-      <div class="show-weather">
-        <h3 class="text-white">Weather code</h3>
-
-        <div class="weather-result">
-          <div>
-            <h1 id="temperature">°C</h1>
-          </div>
-
-          <div>
-            <h2 id="cityResult"></h2>
-          </div>
-
-          <img id="icon" />
-        </div>
-      </div>
+    <div id="mask">
       <!---->
-      <div class="weather-input">
-        <form id="form">
-          <input
-            type="text"
-            id="search"
-            placeholder="Search another location"
-            autocomplete="off"
-          />
-        </form>
+      <div id="card">
+        <div class="show-weather">
+          <h3 class="logo">weather code</h3>
 
-        <button type="button" id="button-submit">Get your city weather</button>
+          <div class="weather-result">
+            <div>
+              <h1 id="temperature"></h1>
+            </div>
 
-        <!---->
-        <ul>
-          <li>
-            <a
-              onclick="getCityWeather('Amsterdam')"
-              style="cursor: pointer"
-              href=""
-              id="amsterdam"
-              >Amsterdam</a
-            >
-          </li>
-          <li>
-            <a
-              onclick="getCityWeather('Berlin')"
-              style="cursor: pointer"
-              href=""
-              id="berlin"
-              >Berlin</a
-            >
-          </li>
-          <li>
-            <a
-              onclick="getCityWeather('New York')"
-              style="cursor: pointer"
-              href=""
-              id="newYork"
-              >New York</a
-            >
-          </li>
-          <li>
-            <a
-              onclick="getCityWeather('Paris')"
-              style="cursor: pointer"
-              href=""
-              id="paris"
-              >Paris</a
-            >
-          </li>
-        </ul>
-        <!---->
-        <hr />
-        <div class="weather-result-details">
-          <p>Weather Details</p>
-          <table>
-            <tr>
-              <td id="description"></td>
-              <td id="cloudsValue">%</td>
-            </tr>
-            <tr>
-              <td>Humidity</td>
-              <td id="humidity">%</td>
-            </tr>
-            <tr>
-              <td>Wind</td>
-              <td id="wind">km/h</td>
-            </tr>
-          </table>
+            <div id="city-icon">
+              <h2 id="cityResult"></h2>
+              <img id="icon" />
+            </div>
+          </div>
         </div>
-
         <!---->
+        <div class="weather-input">
+          <form id="form">
+            <input
+              type="text"
+              id="search"
+              class="fas"
+              placeholder="Search another location"
+              autocomplete="off"
+            />
+          </form>
+          <hr />
+          <button type="button" id="button-submit">
+            Get your city weather
+          </button>
+
+          <!---->
+          <ul>
+            <li class="cities">
+              <a style="cursor: pointer" id="amsterdam">Amsterdam</a>
+            </li>
+            <li class="cities">
+              <a style="cursor: pointer" id="berlin">Berlin</a>
+            </li>
+            <li class="cities">
+              <a style="cursor: pointer" id="newYork">New York</a>
+            </li>
+            <li class="cities">
+              <a style="cursor: pointer" id="paris">Paris</a>
+            </li>
+          </ul>
+          <!---->
+          <hr />
+          <div class="weather-result-details">
+            <p>Weather Details</p>
+            <table>
+              <tr>
+                <td id="description"></td>
+                <td class="right-desc" id="cloudsValue">%</td>
+              </tr>
+              <tr>
+                <td class="desc">humidity</td>
+                <td class="right-desc" id="humidity">%</td>
+              </tr>
+              <tr>
+                <td class="desc">wind</td>
+                <td class="right-desc" id="wind">km/h</td>
+              </tr>
+            </table>
+          </div>
+
+          <!---->
+        </div>
       </div>
     </div>
   </body>

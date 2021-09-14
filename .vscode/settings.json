@@ -1,4 +1,10 @@
 {
-  "cSpell.words": ["apikey", "imgweather", "infoelem", "openweathermap"],
+  "cSpell.words": [
+    "apikey",
+    "imgweather",
+    "infoelem",
+    "Jost",
+    "openweathermap"
+  ],
   "liveServer.settings.port": 5501
 }
