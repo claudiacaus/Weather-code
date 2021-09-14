@@ -34,7 +34,7 @@ To get started you can simply clone the repo and install the dependencies in the
 | Steps   | with [NPM](https://www.npmjs.com/) |
 | ------- | ---------------------------------- |
 | Install | `npm install`                      |
-| Run     | `npm run dev`                      |
+| Run     | `npm run`                      |
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
