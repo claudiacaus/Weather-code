@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,68 +10,96 @@
   </head>
   <body>
     <!---->
-
-    <div class="weather-result">
-      <div class="logo">
+    <div id="card">
+      <div class="show-weather">
         <h3 class="text-white">Weather code</h3>
+
+        <div class="weather-result">
+          <div>
+            <h1 id="temperature">°C</h1>
+          </div>
+
+          <div>
+            <h2 id="cityResult"></h2>
+          </div>
+
+          <img id="icon" />
+        </div>
       </div>
-
-      <main id="main"></main>
-
-      <div>
-        <h1 id="temperature">°C</h1>
-      </div>
-
-      <div>
-        <h2 id="cityResult">London</h2>
-      </div>
-
-      <div>
-        <img id="icon" alt="weather icon" />
-      </div>
-    </div>
-
-    <!---->
-    <div class="weather-input">
-      <form id="form">
-        <input
-          type="text"
-          id="search"
-          placeholder="Search another location"
-          autocomplete="off"
-        />
-      </form>
-
-      <button type="button" id="button-submit">Get your city weather</button>
-
       <!---->
-      <ul>
-        <li><a href="" class="city-default amsterdam">Amsterdam</a></li>
-        <li><a href=" " class="city-default berlin">Berlin</a></li>
-        <li><a href="" class="city-default newYork">New York</a></li>
-        <li><a href="" class="city-default paris">Paris</a></li>
-      </ul>
-      <!---->
-      <hr />
-      <div class="weather-result-details">
-        <p>Weather Details</p>
-        <table>
-          <tr>
-            <td>cloudy</td>
-            <td>%</td>
-          </tr>
-          <tr>
-            <td>Humidity</td>
-            <td>%</td>
-          </tr>
-          <tr>
-            <td>Wind</td>
-            <td>km/h</td>
-          </tr>
-        </table>
-      </div>
+      <div class="weather-input">
+        <form id="form">
+          <input
+            type="text"
+            id="search"
+            placeholder="Search another location"
+            autocomplete="off"
+          />
+        </form>
 
-      <!---->
+        <button type="button" id="button-submit">Get your city weather</button>
+
+        <!---->
+        <ul>
+          <li>
+            <a
+              onclick="getCityWeather('Amsterdam')"
+              style="cursor: pointer"
+              href=""
+              id="amsterdam"
+              >Amsterdam</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="getCityWeather('Berlin')"
+              style="cursor: pointer"
+              href=""
+              id="berlin"
+              >Berlin</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="getCityWeather('New York')"
+              style="cursor: pointer"
+              href=""
+              id="newYork"
+              >New York</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="getCityWeather('Paris')"
+              style="cursor: pointer"
+              href=""
+              id="paris"
+              >Paris</a
+            >
+          </li>
+        </ul>
+        <!---->
+        <hr />
+        <div class="weather-result-details">
+          <p>Weather Details</p>
+          <table>
+            <tr>
+              <td id="description"></td>
+              <td id="cloudsValue">%</td>
+            </tr>
+            <tr>
+              <td>Humidity</td>
+              <td id="humidity">%</td>
+            </tr>
+            <tr>
+              <td>Wind</td>
+              <td id="wind">km/h</td>
+            </tr>
+          </table>
+        </div>
+
+        <!---->
+      </div>
     </div>
   </body>
 </html>
