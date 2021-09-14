@@ -68,7 +68,7 @@ function addWeatherToPage(data) {
   }
   if (data.weather[0].icon === '02n') {
     icon.src = './assets/icons/02n.png';
-    document.body.style.backgroundImage = `url('./assets/bk02n50d.jpg')`;
+    document.body.style.backgroundImage = `url('./assets/body-imgs/bk02n50d.jpg')`;
     card.style.backgroundImage = `url('./assets/imgweather/image02n.jpg')`;
   }
   if (data.weather[0].icon === '03d') {
