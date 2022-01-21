@@ -33,7 +33,9 @@
 
             <div id="city-icon">
               <h2 id="cityResult"></h2>
-              <img id="icon" />
+              <div>
+                <img id="icon" alt="weather icon" />
+              </div>
             </div>
           </div>
         </div>
@@ -44,30 +46,30 @@
               type="text"
               id="search"
               class="fas"
-              placeholder="Search another location"
+              placeholder="Search a location &#x1F50E;&#xFE0E;"
               autocomplete="off"
             />
           </form>
           <hr />
-          <button type="button" id="button-submit">
-            Get your city weather
-          </button>
 
           <!---->
-          <ul>
-            <li class="cities">
+          <div class="cities-container">
+            <button type="button" id="button-submit">
+              Get your city weather
+            </button>
+            <button class="cities">
               <a style="cursor: pointer" id="amsterdam">Amsterdam</a>
-            </li>
-            <li class="cities">
+            </button>
+            <button class="cities">
               <a style="cursor: pointer" id="berlin">Berlin</a>
-            </li>
-            <li class="cities">
+            </button>
+            <button class="cities">
               <a style="cursor: pointer" id="newYork">New York</a>
-            </li>
-            <li class="cities">
+            </button>
+            <button class="cities">
               <a style="cursor: pointer" id="paris">Paris</a>
-            </li>
-          </ul>
+            </button>
+          </div>
           <!---->
           <hr />
           <div class="weather-result-details">
