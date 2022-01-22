@@ -6,6 +6,8 @@ This is a Weather web application that provides weather information using Public
 
 [Weather code](https://claudiadewindt.github.io/Weather-code/)
 
+![Macbook](https://user-images.githubusercontent.com/55986532/150656575-d79344c5-ccbf-4c9d-8ba6-5f8fd698623c.png)
+
 ![Macbook](https://user-images.githubusercontent.com/55986532/150647110-ac961ffe-d722-4fcc-88fe-a9f9144cccf9.png)
 
 
