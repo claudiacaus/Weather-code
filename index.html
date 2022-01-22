@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather code</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,78 +21,74 @@
     <script type="module" src="main.js" defer></script>
   </head>
   <body>
-    <div id="mask">
-      <!---->
-      <div id="card">
-        <div class="show-weather">
-          <h3 class="logo">weather code</h3>
-
-          <div class="weather-result">
+    <!---->
+    <div id="card">
+      <div class="show-weather">
+        <div class="weather-result">
+          <div class="left-container">
             <div>
-              <h1 id="temperature"></h1>
+              <h3 class="logo">weather code</h3>
             </div>
-
-            <div id="city-icon">
+            <div class="weather-bottom">
+              <h1 id="temperature"></h1>
               <h2 id="cityResult"></h2>
-              <div>
-                <img id="icon" alt="weather icon" />
-              </div>
+              <img id="icon" alt="weather icon" />
             </div>
           </div>
+        </div>
+      </div>
+      <!---->
+      <div class="weather-input">
+        <form id="form">
+          <input
+            type="text"
+            id="search"
+            class="fas"
+            placeholder="Search a location &#x1F50E;&#xFE0E;"
+            autocomplete="off"
+          />
+        </form>
+        <hr />
+
+        <!---->
+        <div class="cities-container">
+          <button type="button" id="button-submit">
+            Get your city weather
+          </button>
+          <button class="cities">
+            <a style="cursor: pointer" id="amsterdam">Amsterdam</a>
+          </button>
+          <button class="cities">
+            <a style="cursor: pointer" id="berlin">Berlin</a>
+          </button>
+          <button class="cities">
+            <a style="cursor: pointer" id="newYork">New York</a>
+          </button>
+          <button class="cities">
+            <a style="cursor: pointer" id="paris">Paris</a>
+          </button>
         </div>
         <!---->
-        <div class="weather-input">
-          <form id="form">
-            <input
-              type="text"
-              id="search"
-              class="fas"
-              placeholder="Search a location &#x1F50E;&#xFE0E;"
-              autocomplete="off"
-            />
-          </form>
-          <hr />
-
-          <!---->
-          <div class="cities-container">
-            <button type="button" id="button-submit">
-              Get your city weather
-            </button>
-            <button class="cities">
-              <a style="cursor: pointer" id="amsterdam">Amsterdam</a>
-            </button>
-            <button class="cities">
-              <a style="cursor: pointer" id="berlin">Berlin</a>
-            </button>
-            <button class="cities">
-              <a style="cursor: pointer" id="newYork">New York</a>
-            </button>
-            <button class="cities">
-              <a style="cursor: pointer" id="paris">Paris</a>
-            </button>
-          </div>
-          <!---->
-          <hr />
-          <div class="weather-result-details">
-            <p>Weather Details</p>
-            <table>
-              <tr>
-                <td id="description"></td>
-                <td class="right-desc" id="cloudsValue">%</td>
-              </tr>
-              <tr>
-                <td class="desc">humidity</td>
-                <td class="right-desc" id="humidity">%</td>
-              </tr>
-              <tr>
-                <td class="desc">wind</td>
-                <td class="right-desc" id="wind">km/h</td>
-              </tr>
-            </table>
-          </div>
-
-          <!---->
+        <hr />
+        <div class="weather-result-details">
+          <p>Weather Details</p>
+          <table>
+            <tr>
+              <td id="description"></td>
+              <td class="right-desc" id="cloudsValue">%</td>
+            </tr>
+            <tr>
+              <td class="desc">humidity</td>
+              <td class="right-desc" id="humidity">%</td>
+            </tr>
+            <tr>
+              <td class="desc">wind</td>
+              <td class="right-desc" id="wind">km/h</td>
+            </tr>
+          </table>
         </div>
+
+        <!---->
       </div>
     </div>
   </body>
