@@ -47,3 +47,12 @@ To get started you can simply clone the repo and install the dependencies in the
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+![made-with-javascript](https://user-images.githubusercontent.com/55986532/155530573-dec8f379-92f8-429d-ae78-dfd70045881b.svg)
+![made-with-css](https://user-images.githubusercontent.com/55986532/155530576-eaea2581-4588-4750-ac88-87ff310e1652.svg)
+![made-with-node](https://user-images.githubusercontent.com/55986532/155530578-baf7fa40-7500-468a-8050-68da4381da4d.svg)
+![made-with-html](https://user-images.githubusercontent.com/55986532/155530580-d5f828b1-b466-4991-8a94-d34b948a9b4d.svg)
+
+![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
+
+
