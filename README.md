@@ -4,7 +4,7 @@ This is a Weather web application that provides weather information using Public
 
 ### Check the project
 
-[Weather code](https://claudiadewindt.github.io/Weather-code/)
+[Weather code](https://weather-code-ie8zr14mb-claudiadewindt.vercel.app/)
 
 ![Macbook](https://user-images.githubusercontent.com/55986532/150656575-d79344c5-ccbf-4c9d-8ba6-5f8fd698623c.png)
 
